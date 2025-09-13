@@ -1,0 +1,15 @@
+#org @start
+lock
+faceplayer
+checkflag 0x828
+if 0x1 goto @alreadytalked
+msgbox @first "Salut ! Bienvenue à mon laboratoire !", 0
+fanfare 0x3D4
+waitfanfare
+msgbox @first "Prends ce Pokémon pour commencer ton aventure !", 0
+setflag 0x828
+end
+@alreadytalked
+msgbox @first "On s'est déjà rencontrés, hein ?", 0
+release
+end
